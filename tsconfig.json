@@ -1,10 +1,37 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "experimentalDecorators": true,
     "plugins": [
       {
         "name": "typescript-tslint-plugin"
       }
     ],
+    "baseUrl": "./",
+    "paths": {
+      "@shop/*": ["src/app/@public/*"],
+      "@admin/*": ["src/app/@admin/*"],
+      "@admin-core/*": ["src/app/@admin/core/*"],
+      "@shop-core/*": ["src/app/@public/core/*"]
+    },
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
@@ -70,5 +97,4 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
 }

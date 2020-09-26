@@ -1,5 +1,0 @@
-"Tipos de usuario que tenemos - Permisos de los usuarios"
-enum Role {
-    CLIENT
-    ADMIN
-}
